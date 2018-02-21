@@ -765,7 +765,7 @@ class Fresque
         }
 
         if ($this->runtime['Scheduler']['enabled'] === true) {
-            $this->startscheduler(array('debug' => $debug));
+            $this->startScheduler(array_merge($this->runtime, array('debug' => $debug)));
         }
 
         $this->output->outputLine();
